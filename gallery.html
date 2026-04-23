@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Archive | Galleria Art</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+    <div class="container">
+
+                <a href="images/logo.png" class="navbar-brand fw-bold fs-2 text-warning font-serif">
+            <img src="images/logo.png" class="rounded me-2" alt="Logo" height="50">Galleria
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto gap-2">
+
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white active" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="paintings.html">Paintings</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+
+                <li class="nav-item btn-login">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium" href="login.html">
+                        <i class="fas fa-user me-2"></i>Login
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium" href="sitemap.html">
+                        <i class="fas fa-sitemap me-2"></i>Sitemap
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="gallery-header text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold font-serif">Visual <span class="text-warning">Archive</span></h1>
+        
+        <div class="mt-4" id="genre-filters">
+            <span class="small text-secondary d-block mb-2">Category:</span>
+            <button class="filter-btn active"  data-type="style" data-filter="all">All Works</button>
+            <button class="filter-btn" id="religious" data-type="style" data-filter="Religious">Religious</button>
+            <button class="filter-btn" id="abstract" data-type="style" data-filter="Abstract">Abstract</button>
+            <button class="filter-btn" id="landscape" data-type="style" data-filter="Landscape">Landscape</button>
+            <button class="filter-btn" id="figurative" data-type="style" data-filter="Figurative">Figurative</button>
+        </div>
+
+        <div class="mt-3" id="color-filters">
+            <span class="small text-secondary d-block mb-2">Surface:</span>
+            <button class="filter-btn btn-sm" data-type="surface" data-filter="Acrylic">Acrylic</button>
+            <button class="filter-btn btn-sm" data-type="surface" data-filter="Canvas">Canvas</button>
+            <button class="filter-btn btn-sm" data-type="surface" data-filter="Paper">Paper</button>
+            <button class="filter-btn btn-sm" data-type="surface" data-filter="OHP Sheet">OHP Sheet</button>
+            <button class="filter-btn btn-sm" data-type="surface" data-filter="Fabric">Fabric</button>
+       </div>
+    </div>
+</section>
+
+<div class="container-fluid px-4 pb-5 mt-4">
+    <div class="gallery-container" id="dynamicGallery"></div>
+</div>
+<footer class="py-5 text-white">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <h4 class="text-warning mb-3 font-serif fw-bold">
+                    <i class="fas fa-palette me-2"></i>Galleria Art Gallery
+                </h4>
+                <p class="mb-4 text-secondary leading-relaxed">Certified company engaged in selling wide variety of masterpieces worldwide since 1995.</p>
+                <div class="d-flex gap-2 align-items-start text-secondary">
+                    <i class="fas fa-map-marker-alt text-warning mt-1"></i>
+                    <p class="small">Aptech Computer Education North Karachi Center Sector 11-A, North Karachi, Pakistan</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-3 text-uppercase">Quick Links</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 footer-links">
+                    <li><a href="index.html" class="text-white text-decoration-none"> Home</a></li>
+                    <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                    <li><a href="faqs.html" class="text-white text-decoration-none"> FAQs</a></li>
+                    <li><a href="sitemap.html" class="text-white text-decoration-none">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-3 text-uppercase">Legal</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                <li><a href="shipping-policy.html" class="text-white text-decoration-none">Shipping Policy</a></li>
+            </ul>
+            </div>
+            <div class="col-lg-4">
+                <h6 class="text-white fw-bold mb-3 text-uppercase">Stay Connected</h6>
+                <p class="text-secondary">+92 3370757609 | hello@galleria.art</p>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="https://www.instagram.com/galleria_darte__/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/akgalleria/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/GalleriaAk" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-5 opacity-10">
+        <div class="text-center">
+            <p class="mb-0 text-secondary">&copy; 2024 Galleria Fine Arts. All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+$(document).ready(function() {
+    const paintings = [
+        // Religious
+        { id: 1, name: "Divine Bismillah", style: "Religious", surface: "Canvas", colorType: "Acrylic colour", img: "images/img1.jpeg" },
+        { id: 2, name: "Noor-e-Tawheed", style: "Religious", surface: "Paper", colorType: "Oil colour", img: "images/img2.png" },
+        { id: 3, name: "99 Names of Allah", style: "Religious", surface: "Acrylic", colorType: "Ink colour", img: "images/img3.png" },
+        { id: 4, name: "Golden Temple", style: "Religious", surface: "Acrylic", colorType: "Acrylic colour", img: "images/img4.jpeg" },
+        { id: 5, name: "Madina Nights", style: "Religious", surface: "Canvas", colorType: "Oil colour", img: "images/img5.jpeg" },
+        // Abstract
+        { id: 6, name: "Modern Chaos", style: "Abstract", surface: "Canvas", colorType: "Oil colour", img: "images/img6.jpeg" },
+        { id: 7, name: "Neon Vibes", style: "Abstract", surface: "Acrylic", colorType: "Enamel colour", img: "images/img7.jpeg" },
+        { id: 8, name: "Abstract Fire", style: "Abstract", surface: "Paper", colorType: "Poster colour", img: "images/img8.jpeg" },
+        { id: 9, name: "Cyber Street", style: "Abstract", surface: "Fabric", colorType: "Ink colour", img: "images/img9.jpeg" },
+        { id: 10, name: "Zentangle Art", style: "Abstract", surface: "Paper", colorType: "Ball point pen", img: "images/img10.jpeg" },
+        // Flower & Nature
+        { id: 11, name: "Spring Bloom", style: "Flower", surface: "Canvas", colorType: "Acrylic colour", img: "images/img11.jpeg" },
+        { id: 12, name: "Floral Bloom", style: "Flower", surface: "Fabric", colorType: "Water colour", img: "images/img12.jpeg" },
+        { id: 13, name: "Desert Rose", style: "Flower", surface: "OHP Sheet", colorType: "Ink colour", img: "images/img13.jpeg" },
+        { id: 14, name: "Quiet Pond", style: "Nature", surface: "Canvas", colorType: "Oil colour", img: "images/img14.jpeg" },
+        { id: 15, name: "Lush Valley", style: "Nature", surface: "Canvas", colorType: "Oil colour", img: "images/img15.jpeg" },
+        // Landscape
+        { id: 16, name: "Sunset Gold", style: "Landscape", surface: "Paper", colorType: "Water colour", img: "images/img16.jpeg" },
+        { id: 17, name: "River Flow", style: "Landscape", surface: "Canvas", colorType: "Acrylic colour", img: "images/img17.jpeg" },
+        { id: 18, name: "Ocean Mist", style: "Landscape", surface: "OHP Sheet", colorType: "Enamel colour", img: "images/img18.jpeg" },
+        { id: 19, name: "Vintage Car", style: "Landscape", surface: "Fabric", colorType: "Oil colour", img: "images/img19.jpeg" },
+        { id: 20, name: "Silent Hills", style: "Landscape", surface: "Paper", colorType: "Charcoal", img: "images/img20.jpeg" },
+        // Figurative
+        { id: 21, name: "Midnight Blues", style: "Figurative", surface: "Canvas", colorType: "Oil colour", img: "images/img21.jpeg" },
+        { id: 22, name: "Deep Shadows", style: "Figurative", surface: "Paper", colorType: "Charcoal", img: "images/img22.jpeg" },
+        { id: 23, name: "Human Grace", style: "Figurative", surface: "Fabric", colorType: "Acrylic colour", img: "images/img23.jpeg" },
+        { id: 24, name: "Sketch of Man", style: "Figurative", surface: "Paper", colorType: "Ball point pen", img: "images/img24.jpeg" },
+        { id: 25, name: "Doodle Art", style: "Abstract", surface: "OHP Sheet", colorType: "Ink colour", img: "images/img25.jpeg" }
+    
+    ];
+
+    function renderGallery(filterValue = 'all', filterType = 'style') {
+        const container = $("#dynamicGallery");
+        container.fadeOut(200, function() {
+            container.empty();
+            paintings.forEach(p => {
+                let show = false;
+                if (filterValue === 'all') {
+                    show = true;
+                } else if (filterType === 'style' && p.style === filterValue) {
+                    show = true;
+                } else if (filterType === 'surface' && p.surface === filterValue) {
+                    show = true;
+                }
+
+                if (show) {
+                    container.append(`
+                        <div class="gallery-item">
+                            <img src="${p.img}" alt="${p.name}">
+                            <div class="img-overlay">
+                                <h5 class="mb-1 text-warning">${p.name}</h5>
+                                <div class="mb-2">
+                                    <span class="tag-badge">${p.style}</span>
+                                    <span class="tag-badge" style="color:#0dcaf0; background:rgba(13,202,240,0.1)">${p.colorType}</span>
+                                </div>
+                                <small class="text-white-50">Surface: ${p.surface}</small>
+                            </div>
+                        </div>
+                    `);
+                }
+            });
+            container.fadeIn(400);
+        });
+    }
+
+    $('.filter-btn').on('click', function() {
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+        renderGallery($(this).data('filter'), $(this).data('type'));
+    });
+
+    renderGallery('all');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.terms-wrapper {
+    background: #0a0a0a;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.9);
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.terms-nav .nav-link {
+    color: #666;
+    font-size: 1.1rem;
+    padding: 15px 0;
+    transition: 0.3s all ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.terms-nav .nav-link:hover, .terms-nav .nav-link.active {
+    color: #FACC15;
+    padding-left: 10px;
+}
+
+.term-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.term-section p {
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #FACC15;
+}
+
+@media (max-width: 991px) {
+    .terms-wrapper {
+        border-radius: 20px;
+    }
+}

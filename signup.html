@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Galleria Art</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+    <div class="container">
+
+        <a href="images/logo.png" class="navbar-brand fw-bold fs-2 text-warning font-serif">
+            <img src="images/logo.png" class="rounded me-2" alt="Logo" height="50">Galleria
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto gap-2">
+
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="paintings.html">Paintings</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+
+                <li class="nav-item btn-login">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium active" href="login.html">
+                        <i class="fas fa-user me-2"></i>Login
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium" href="sitemap.html">
+                        <i class="fas fa-sitemap me-2"></i>Sitemap
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="split-container mt-5">
+        <div class="split-left">
+            <h1 class="font-serif display-3 fw-bold mb-4">Start Your <br><span class="text-yellow">Artistic Journey</span></h1>
+            <p class="fs-5 text-secondary">Join our community of 10,000+ collectors and artists worldwide. Get exclusive access to new masterpieces and auctions.</p>
+            <div class="mt-5">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-check-circle text-yellow me-3"></i>
+                    <span>Authenticity Guaranteed</span>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-check-circle text-yellow me-3"></i>
+                    <span>Worldwide Insured Shipping</span>
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-check-circle text-yellow me-3"></i>
+                    <span>Direct Curator Support</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="split-right">
+            <div class="signup-box">
+                <div class="mt-5 text-center text-lg-start">
+                    <h2 class="font-serif fw-bold h1">Create Account</h2>
+                    <p class="text-secondary">It only takes a minute to join.</p>
+                </div>
+                <form id="signupForm">
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="First Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Email Address" required>
+                    <input type="tel" class="form-control" placeholder="Phone Number">
+                    <input type="password" class="form-control" placeholder="Password" required>
+                    <input type="password" class="form-control" placeholder="Confirm Password" required>
+                    <small id="passError" class="text-danger d-none">Passwords do not match</small>
+                    <div class="form-check mb-4 mt-2">
+                        <input type="checkbox" class="form-check-input" id="terms" required>
+                        <label class="form-check-label small text-secondary" for="terms">
+                            I agree to the <a href="Terms.html" class="text-yellow">Terms & Conditions</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-signup shadow">Join the Gallery</button>
+                </form>
+
+                <div class="text-center my-4">
+                    <span class="small text-secondary px-2" style="background: var(--dark-bg); position: relative; z-index: 1;">Or sign up with</span>
+                    <hr style="margin-top: -10px; border-color: #333;">
+                </div>
+                <p class="text-center mt-5 text-secondary">
+                    Already have an account? <a href="login.html" class="text-yellow fw-bold text-decoration-none">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+$(document).ready(function(){
+
+    $('#signupForm').on('submit', function(e){
+        e.preventDefault();
+
+        let password = $('input[placeholder="Password"]').val();
+        let confirmPassword = $('input[placeholder="Confirm Password"]').val();
+
+        if(password !== confirmPassword){
+            $('#passError').removeClass('d-none');
+            return;
+        } else {
+            $('#passError').addClass('d-none');
+        }
+
+        const btn = $('.btn-signup');
+        btn.html('<i class="fas fa-circle-notch fa-spin"></i> Creating Account...');
+
+        setTimeout(function(){
+            alert('Welcome to Galleria! Your account has been created.');
+            window.location.href = 'index.html';
+        }, 2000);
+    });
+
+});
+    </script>
+</body>
+</html>

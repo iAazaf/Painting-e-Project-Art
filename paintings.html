@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paintings | Galleria VIP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/painting.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+    <div class="container">
+
+                <a href="images/logo.png" class="navbar-brand fw-bold fs-2 text-warning font-serif">
+            <img src="images/logo.png" class="rounded me-2" alt="Logo" height="50">Galleria
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto gap-2">
+
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link text-white active" href="paintings.html">Paintings</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+
+                <li class="nav-item btn-login">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium" href="login.html">
+                        <i class="fas fa-user me-2"></i>Login
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium" href="sitemap.html">
+                        <i class="fas fa-sitemap me-2"></i>Sitemap
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-icon-link text-white" href="wishlist.html">
+                        <i class="fas fa-heart text-warning fs-5"></i>
+                        <span class="badge-notify wishlist-badge">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-icon-link text-white" href="cart.html">
+                        <i class="fas fa-shopping-cart text-warning fs-5"></i>
+                        <span class="badge-notify cart-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero mt-5 pt-5 text-center">
+    <h1 class="text-warning fw-bold display-5">Masterpieces Collection</h1>
+    <p class="text-white">Premium Art Gallery | 15 Exclusive Works</p>
+</section>
+
+<section class="filter-bar mb-4">
+    <div class="container d-flex flex-wrap gap-2 justify-content-center">
+        <input type="text" id="searchInput" class="form-control w-25" placeholder="Search by name...">
+        <button class="btn btn-outline-warning filter" data-filter="all">All</button>
+        <button class="btn btn-outline-light filter" data-filter="Acrylic">Acrylic</button>
+        <button class="btn btn-outline-light filter" data-filter="Oil">Oil</button>
+        <button class="btn btn-outline-light filter" data-filter="Watercolor">Watercolor</button>
+        <button class="btn btn-outline-light filter" data-filter="Charcoal">Charcoal</button>
+        <button class="btn btn-outline-light filter" data-filter="Ink">Ink</button>
+        <button class="btn btn-outline-light filter" data-filter="Enamel">Enamel</button>
+        <button class="btn btn-outline-light filter" data-filter="Ballpoint">Ballpoint</button>
+    </div>
+</section>
+
+<section class="container pb-5">
+    <div class="row g-4" id="galleryContainer">
+        </div>
+
+    <nav class="mt-5">
+        <ul class="pagination justify-content-center" id="pagination"></ul>
+    </nav>
+</section>
+<div class="modal fade" id="artModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border-warning">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title text-warning">Painting Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center" id="modalBody"></div>
+            <div class="modal-footer border-secondary">
+                <button class="btn btn-warning w-100" onclick="downloadDoc()">Download as Word Document</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="py-5 text-white">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <h4 class="text-warning mb-3 font-serif fw-bold">
+                    <i class="fas fa-palette me-2"></i>Galleria Art Gallery
+                </h4>
+                <p class="mb-4 text-secondary ">Certified company engaged in selling wide variety of masterpieces worldwide since 1995.</p>
+                <div class="d-flex gap-2 align-items-start text-secondary">
+                    <i class="fas fa-map-marker-alt text-warning mt-1"></i>
+                    <p class="small">Aptech Computer Education North Karachi Center Sector 11-A, North Karachi, Pakistan</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-3 text-uppercase">Quick Links</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 footer-links">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                    <li><a href="faqs.html" class="text-white text-decoration-none">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-3 text-uppercase">Paintings</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="paintings.html" class="text-white text-decoration-none">All Paintings</a></li>
+                    <li><a href="paintings.html#abstract" class="text-white text-decoration-none">Abstract</a></li>
+                    <li><a href="paintings.html#landscape" class="text-white text-decoration-none">Landscape</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h6 class="text-white fw-bold mb-3 text-uppercase">Stay Connected</h6>
+                <p class="text-secondary">+92 3370757609 | hello@galleria.art</p>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="https://www.instagram.com/galleria_darte__/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/akgalleria/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/GalleriaAk" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-5 opacity-10">
+        <div class="text-center">
+            <p class="mb-0 text-secondary">&copy; 2024 Galleria Fine Arts. All Rights Reserved</p>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+$(document).ready(function() {
+const paintings = [
+    { id: 1, name: "Divine Bismillah", artist: "Alex Carter", type: "Acrylic", price: "$240", img: "images/img1.jpeg", sold: false },
+    { id: 2, name: "Noor-e-Tawheed", artist: "A. Rahman", type: "Oil", price: "$350", img: "images/img2.png", sold: true },
+    { id: 3, name: "99 Names of Allah", artist: "Liam Neeson", type: "Watercolor", price: "$180", img: "images/img3.png", sold: false },
+    { id: 4, name: "Golden Temple", artist: "Bruce Wayne", type: "Charcoal", price: "$320", img: "images/img4.jpeg", sold: false },
+    { id: 5, name: "Madina Nights", artist: "Han Zo", type: "Ink", price: "$290", img: "images/img5.jpeg", sold: false },
+    { id: 6, name: "Modern Chaos", artist: "Tony Stark", type: "Acrylic", price: "$500", img: "images/img6.jpeg", sold: false },
+    { id: 7, name: "Neon Vibes", artist: "Steve Rogers", type: "Oil", price: "$380", img: "images/img7.jpeg", sold: false },
+    { id: 8, name: "Abstract Fire", artist: "Wanda M.", type: "Watercolor", price: "$150", img: "images/img8.jpeg", sold: true },
+    { id: 9, name: "Cyber Street", artist: "Peter P.", type: "Charcoal", price: "$210", img: "images/img9.jpeg", sold: false },
+    { id: 10, name: "Zentangle Art", artist: "Kenji", type: "Ink", price: "$440", img: "images/img10.jpeg", sold: false },
+    { id: 11, name: "Spring Bloom", artist: "Natasha R.", type: "Acrylic", price: "$260", img: "images/img11.jpeg", sold: false },
+    { id: 12, name: "Floral Bloom", artist: "Arthur C.", type: "Oil", price: "$550", img: "images/img12.jpeg", sold: false },
+    { id: 13, name: "Desert Rose", artist: "Diana P.", type: "Watercolor", price: "$195", img: "images/img13.jpeg", sold: false },
+    { id: 14, name: "Quiet Pond", artist: "Logan X.", type: "Charcoal", price: "$130", img: "images/img14.jpeg", sold: false },
+    { id: 15, name: "Lush Valley", artist: "Barry A.", type: "Ink", price: "$225", img: "images/img15.jpeg", sold: true },
+    { id: 16, name: "Sunset Gold", artist: "Dom T.", type: "Enamel", price: "$800", img: "images/img16.jpeg", sold: false },
+    { id: 17, name: "River Flow", artist: "S. Holmes", type: "Ballpoint", price: "$90", img: "images/img17.jpeg", sold: false },
+    { id: 18, name: "Ocean Mist", artist: "Pyro", type: "Poster", price: "$120", img: "images/img18.jpeg", sold: false },
+    { id: 19, name: "Vintage Car", artist: "Bob Ross", type: "Oil", price: "$999", img: "images/img19.jpeg", sold: true },
+    { id: 20, name: "Silent Hills", artist: "Dracula", type: "Ink", price: "$310", img: "images/img20.jpeg", sold: false },
+    { id: 21, name: "Midnight Blues", artist: "V", type: "Acrylic", price: "$600", img: "images/img21.jpeg", sold: false },
+    { id: 22, name: "Deep Shadows", artist: "Monet", type: "Watercolor", price: "$750", img: "images/img22.jpeg", sold: false },
+    { id: 23, name: "Human Grace", artist: "Leo", type: "Charcoal", price: "$400", img: "images/img23.jpeg", sold: false },
+    { id: 24, name: "Sketch of Man", artist: "Ferrari", type: "Enamel", price: "$1200", img: "images/img24.jpeg", sold: true },
+    { id: 25, name: "Doodle Art", artist: "Student X", type: "Ballpoint", price: "$20", img: "images/img25.jpeg", sold: false }
+];
+    let filteredList = [...paintings];
+    let currentPage = 1;
+    const itemsPerPage = 8;
+    let activeItem = null;
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    
+
+
+window.addToCart = function(id) {
+    const item = paintings.find(p => p.id === id);
+    if (!item) return;
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    
+    const exists = cart.find(i => i.id === id);
+    if (exists) {
+        alert("This masterpiece is already in your cart!");
+    } else {
+        cart.push(item);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartBadge();
+        alert(`${item.name} added to cart!`);
+    }
+};
+
+window.addToWishlist = function(id) {
+    const item = paintings.find(p => p.id === id);
+    if (!item) return;
+
+    const exists = wishlist.find(i => i.id === id);
+    if (exists) {
+        alert("This painting is already in your wishlist.");
+        return;
+    }
+
+    wishlist.push(item);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    updateWishlistBadge();
+    alert(`${item.name} added to your wishlist!`);
+};
+
+function updateCartBadge() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    $(".cart-badge").text(cart.length);
+}
+
+function updateWishlistBadge() {
+    wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    $(".wishlist-badge").text(wishlist.length);
+}
+
+function renderGallery() {
+    const row = $("#galleryContainer");
+    row.empty();
+    
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const paginatedItems = filteredList.slice(start, end);
+
+    paginatedItems.forEach(p => {
+        const soldTag = p.sold ? `<div class="sold-tag">Sold Out</div>` : "";
+        const imgClass = p.sold ? "art-img sold-overlay" : "art-img";
+        const btnClass = p.sold ? "btn-secondary disabled" : "btn-yellow";
+
+        const inWishlist = wishlist.some(i => i.id === p.id);
+        const wishlistButtonClass = inWishlist ? 'btn-secondary disabled' : 'btn-outline-warning';
+        const wishlistButtonLabel = inWishlist ? 'Saved' : 'Add to Wishlist';
+
+        row.append(`
+            <div class="col-md-3 mb-4">
+                <div class="art-card" 
+                     onclick="${p.sold ? '' : 'openDetails(' + p.id + ')'}" 
+                     style="cursor: ${p.sold ? 'default' : 'pointer'}">
+                    
+                    ${soldTag}
+                    <img class="${imgClass}" src="${p.img}">
+                    
+                    <div class="p-3 text-white">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h5 class="mb-0 text-truncate">${p.name}</h5>
+                            <i class="far fa-heart text-warning"></i>
+                        </div>
+                        <small class="text-warning d-block mb-2">${p.type}</small>
+                        <p class="text-secondary mb-1" style="font-size: 0.8rem;">${p.artist}</p>
+                        <div class="fw-bold text-warning fs-5 mb-3">${p.price}</div>
+                        
+                        <div class="d-grid gap-2">
+                            <button class="btn ${btnClass} btn-lg" 
+                                    ${p.sold ? 'disabled' : ''} 
+                                    onclick="event.stopPropagation(); addToCart(${p.id});">
+                                <i class="fas fa-shopping-cart me-2"></i>${p.sold ? 'Sold Out' : 'Add to Cart'}
+                            </button>
+                            <button class="btn ${wishlistButtonClass} btn-lg" 
+                                    onclick="event.stopPropagation(); addToWishlist(${p.id});"
+                                    ${inWishlist ? 'disabled' : ''}>
+                                <i class="fas fa-heart me-2"></i>${wishlistButtonLabel}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+    });
+    renderPagination();
+    updateCartBadge(); // Update badge on load
+    updateWishlistBadge();
+}
+
+    function renderPagination() {
+        const totalPages = Math.ceil(filteredList.length / itemsPerPage);
+        const paginUl = $("#pagination");
+        paginUl.empty();
+
+        for (let i = 1; i <= totalPages; i++) {
+            paginUl.append(`
+                <li class="page-item ${i === currentPage ? 'active' : ''}">
+                    <a class="page-link" href="javascript:void(0)" onclick="changePage(${i})">${i}</a>
+                </li>
+            `);
+        }
+    }
+
+    window.changePage = function(page) {
+        currentPage = page;
+        renderGallery();
+        window.scrollTo(0, 400);
+    }
+
+    window.openDetails = function(id) {
+        activeItem = paintings.find(p => p.id === id);
+        $("#modalBody").html(`
+            <img src="${activeItem.img}" class="img-fluid rounded mb-3" style="max-height: 250px;">
+            <h3>${activeItem.name}</h3>
+            <p><b>Artist:</b> ${activeItem.artist}</p>
+            <p><b>Medium:</b> ${activeItem.type}</p>
+            <p class="text-warning fs-4">${activeItem.price}</p>
+        `);
+        new bootstrap.Modal('#artModal').show();
+    }
+
+    window.downloadDoc = function() {
+        const content = `GALLERIA VIP - ART DETAILS\n\nPainting: ${activeItem.name}\nArtist: ${activeItem.artist}\nType: ${activeItem.type}\nPrice: ${activeItem.price}`;
+        const blob = new Blob([content], { type: 'application/msword' });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = activeItem.name + ".doc";
+        link.click();
+    }
+
+    // Search Logic
+    $("#searchInput").on("keyup", function() {
+        const val = $(this).val().toLowerCase();
+        filteredList = paintings.filter(p => p.name.toLowerCase().includes(val));
+        currentPage = 1;
+        renderGallery();
+    });
+
+   
+    $(".filter").click(function() {
+        const type = $(this).data("filter");
+        $(".filter").removeClass("btn-warning text-dark").addClass("btn-outline-light");
+        $(this).addClass("btn-warning text-dark").removeClass("btn-outline-light");
+        
+        filteredList = (type === "all") ? paintings : paintings.filter(p => p.type === type);
+        currentPage = 1;
+        renderGallery();
+    });
+
+    renderGallery();
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

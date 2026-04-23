@@ -1,0 +1,105 @@
+.split-container {
+    display: flex;
+    height: 100vh;
+}
+
+
+.split-left {
+    flex: 1;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('../images/sign.jpeg') center/cover;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #0f0f0f inset !important;
+    -webkit-text-fill-color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+@media (min-width: 992px) {
+    .split-left {
+        display: flex;
+    }
+}
+
+
+.split-right {
+    flex: 1;
+    background: var(--dark-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-control {
+    background: #111 !important;
+    border: 1px solid #333;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.form-control:focus {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.15);
+    transform: scale(1.02);
+}
+
+
+.btn-login {
+    background: var(--primary-yellow);
+    color: black;
+    font-weight: 700;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #eab308;
+    transform: scale(1.02);
+}
+
+
+.social-btn {
+    background: transparent;
+    border: 1px solid #333;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: white;
+    color: black;
+}
+.text-yellow { color: var(--primary-yellow); }
+
+.divider-text {
+    background: var(--dark-bg);
+    position: relative;
+    z-index: 1;
+}
+::placeholder {
+    color: #938d8d !important;
+    opacity: 1 !important;
+}

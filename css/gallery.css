@@ -1,0 +1,83 @@
+
+        .gallery-header {
+            padding: 140px 0 60px;
+            background: linear-gradient(to bottom, #111, #000);
+        }
+        .filter-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid #333;
+            padding: 10px 25px;
+            border-radius: 50px;
+            margin: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-yellow);
+            color: black;
+            border-color: var(--primary-yellow);
+            box-shadow: 0 5px 15px rgba(250, 204, 21, 0.3);
+        }
+
+        .gallery-container {
+              display: grid;
+                grid-template-columns: repeat(3 , 1fr);
+                gap: 15px;
+            }
+        @media (max-width: 992px) { .gallery-container { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } }
+        @media (max-width: 576px) { .gallery-container { grid-template-columns: 1fr; } }
+
+        .gallery-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 15px;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: 0.4s;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            display: block;
+            transition: 0.6s;
+            filter: grayscale(20%);
+        }
+
+        .gallery-item:hover {
+            border-color: var(--primary-yellow);
+            transform: scale(1.02);
+            z-index: 2;
+        }
+
+        .gallery-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        /* --- Info Overlay --- */
+        .img-overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            transition: 0.4s ease-in-out;
+        }
+
+        .gallery-item:hover .img-overlay {
+            bottom: 0;
+        }
+
+        .modal-content {
+            background-color: rgba(0,0,0,0.9);
+            border: 1px solid var(--primary-yellow);
+        }
+        .modal-content img {
+            width: 100%;
+            border-radius: 10px;
+        }

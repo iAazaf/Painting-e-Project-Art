@@ -1,0 +1,156 @@
+
+.navbar{
+    background:#111;
+    border-bottom:1px solid #222;
+}
+
+
+.text-gold{
+    color:#d4af37 !important;
+}
+
+
+.hero{
+    padding:90px 20px 30px;
+    text-align:center;
+}
+
+
+.filter-bar{
+    background:#111;
+    padding:15px;
+    margin-bottom:20px;
+}
+
+.art-card{
+    background:#1a1a1a;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.art-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(212,175,55,0.25);
+}
+
+.art-img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+
+.btn-yellow{
+    background:#d4af37;
+    border:none;
+    color:#000;
+    padding:8px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.btn-yellow:hover{
+    background:#fff;
+}
+
+.cart-badge{
+    background:red;
+    color:#fff;
+    font-size:12px;
+    padding:3px 7px;
+    border-radius:50%;
+    position:absolute;
+    top:-5px;
+    right:-10px;
+}
+
+
+.pagination {
+    gap: 6px;
+}
+
+.pagination .page-link {
+    background: #0f0f0f;     
+    color: #fff;
+    border: 1px solid #2a2a2a;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+
+.pagination .page-link:hover {
+    background: #facc15;       
+    color: #000;
+    border-color: #facc15;
+    transform: translateY(-2px);
+}
+
+
+.pagination .active .page-link {
+    background: #facc15;
+    color: #000;
+    border: 1px solid #facc15;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+}
+
+.page-link:focus {
+    box-shadow: none;
+}
+.art-card { position: relative; }
+
+.sold-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff0000;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sold-overlay {
+    filter: grayscale(100%) brightness(70%);
+}
+        .filter-btn { background: none; border: 1px solid rgba(255,255,255,0.2); color: white; padding: 6px 15px; border-radius: 30px; transition: 0.3s; margin: 3px; cursor: pointer; font-size: 0.85rem; }
+        .filter-btn.active, .filter-btn:hover { background: #ffc107; color: black; border-color: #ffc107; }
+        
+        .gallery-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; height: 320px; border: 1px solid #222; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        
+        .img-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 15px; transform: translateY(100%); transition: 0.4s; }
+        .gallery-item:hover .img-overlay { transform: translateY(0); }
+        
+        .navbar { background: rgba(0,0,0,0.95) !important; backdrop-filter: blur(10px); }
+        .tag-badge { font-size: 0.7rem; background: rgba(255, 193, 7, 0.2); color: #ffc107; padding: 2px 8px; border-radius: 10px; margin-right: 5px; }
+        /* Badge aur Nav Icons Fix */
+.nav-icon-link { 
+    position: relative; 
+    display: inline-block; 
+}
+.badge-notify {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-size: 0.65rem;
+    background: #ffc107; /* Yellow color */
+    color: #000;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,49 @@
+body{
+    background:#0d0d0d;
+    color:#fff;
+    font-family:Poppins;
+}
+.checkout-card{
+    background:#1a1a1a;
+    border-radius:15px;
+    padding:20px;
+    border:1px solid rgba(255,193,7,0.2);
+}
+.form-control{
+    background:#111;
+    border:1px solid #333;
+    color:#fff;
+}
+
+.form-control:focus{
+    border-color:#ffc107;
+    box-shadow:none;
+}
+
+.summary-box{
+    background:#111;
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(255,193,7,0.2);
+}
+.btn-warning{
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-warning:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(255,193,7,0.3);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+
+    -webkit-box-shadow: 0 0 0px 1000px #111 inset !important;
+    -webkit-text-fill-color: #fff !important;
+
+    border: 1px solid #333 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}

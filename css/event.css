@@ -1,0 +1,121 @@
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0a0a0a, #000);
+    color: white;
+    overflow-x: hidden;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(245,197,24,0.15), transparent 60%);
+    top: -200px;
+    left: -200px;
+    filter: blur(140px);
+    animation: glowMove 14s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+@keyframes glowMove {
+    0% { transform: translate(0,0) scale(1); }
+    100% { transform: translate(250px,200px) scale(1.2); }
+}
+
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #f5c518, #fff, #f5c518);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s linear infinite;
+    letter-spacing: 2px;
+}
+
+@keyframes shine {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+.hero p {
+    color: #bdbdbd;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.event-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 18px;
+    padding: 25px;
+    transition: all 0.4s ease;
+
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+
+.event-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.event-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: rgba(245,197,24,0.4);
+    box-shadow: 0 20px 50px rgba(245,197,24,0.15);
+}
+
+
+.tag {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    background: rgba(245,197,24,0.15);
+    color: #f5c518;
+    margin-bottom: 12px;
+}
+
+
+.event-card h3 {
+    color: #f5c518;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.event-card p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+
+.curator-card,
+.img,
+.curator-grid {
+    all: unset;
+}

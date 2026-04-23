@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galleria | Premium Paintings Gallery</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+<div id="page-loader" class="page-loader">
+    <div class="mesh-gradient"></div>
+    <div class="loader-content">
+        <img src="images/logo.png" alt="Galleria Logo" class="main-loader-logo h-100 w-100">
+        <h1 class="text-white fs-2 fw-bold mb-4">WELCOME TO <span class="text-warning">GALLERIA</span></h1>
+        <div class="loader-bar-container">
+            <div class="loader-circle"></div>
+            <p class="text-white fs-5 fw-bold mb-0">LOADING MASTERPIECES</p>
+
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+    <div class="container">
+
+        <a href="images/logo.png" class="navbar-brand fw-bold fs-2 text-warning font-serif">
+            <img src="images/logo.png" class="rounded me-2" alt="Logo" height="50">Galleria
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto gap-2">
+
+                <li class="nav-item"><a class="nav-link text-white active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="paintings.html">Paintings</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+
+                <li class="nav-item btn-login">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium" href="login.html">
+                        <i class="fas fa-user me-2"></i>Login
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium" href="sitemap.html">
+                        <i class="fas fa-sitemap me-2"></i>Sitemap
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="hero-section">
+    <div class="container text-center">
+        <div class="badge bg-warning text-dark fs-6 px-4 py-2 mb-4 fw-bold rounded-pill">
+            <i class="fas fa-certificate me-2"></i>CERTIFIED GLOBAL ART DEALER
+        </div>
+        <h1 class="hero-title fw-bold mb-4 text-white ">
+            Masterpieces for <br><span>Global Collectors</span>
+        </h1>
+        <p class="lead fs-4 mb-5 text-white opacity-75 ">
+            Experience the finest collection of Abstract, Landscape, and Religious paintings on Acrylic, Canvas, and more.
+        </p>
+          <div class="d-flex flex-column flex-md-row gap-4 justify-content-center">
+            <a href="paintings.html" class="btn-premium fs-5 text-decoration-none">
+                Explore Collection
+            </a>
+            <a href="curator.html" class="btn-outline-premium fs-5 text-decoration-none">
+                Our Curator
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="category-section">
+    <div class="container text-center">
+        <h2 class=" display-4 fw-bold text-white mb-3">Browse by <span class="text-warning">Category</span></h2>
+        <p class="text-secondary mb-5 fs-5">Find art that speaks to you.</p>
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-2">
+                <a href="gallery.html#abstract" class="text-warning text-decoration-none">
+                    <div class="category-card p-4 h-100">
+                        <i class="fas fa-braille category-icon mb-3"></i>
+                        <h6>Abstract</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-2">
+                <a href="gallery.html#landscape" class="text-warning text-decoration-none">
+                    <div class="category-card p-4 h-100">
+                        <i class="fas fa-mountain category-icon mb-3"></i>
+                        <h6>Landscape</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-2">
+                <a href="gallery.html#religious" class="text-warning text-decoration-none">
+                    <div class="category-card p-4 h-100">
+                        <i class="fas fa-mosque category-icon mb-3"></i>
+                        <h6>Religious</h6>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-md-2">
+                <a href="gallery.html#figurative" class="text-warning text-decoration-none">
+                    <div class="category-card p-4 h-100">
+                        <i class="fas fa-user-friends category-icon mb-3"></i>
+                        <h6>Figurative</h6>
+                    </div>
+                </a>
+            </div>
+       </div>
+    </div>
+</section>
+<section class="stats-section text-white py-5">
+    <div class="container text-center">
+        <h2 class="display-4 fw-bold text-white mb-5">Our Journey To <span class="text-warning">Global Art</span></h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <h2 class="stat-number fw-bold mb-2 counter" data-target="500">0</h2>
+                <h2 class="stat-number fw-bold mb-2 d-inline">+</h2>
+                <p class="fs-5 fw-medium mb-0">Original Paintings</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="stat-number fw-bold mb-2 counter" data-target="6">0</h2>
+                <p class="fs-5 fw-medium mb-0">Categories</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="stat-number fw-bold mb-2 counter" data-target="25">0</h2>
+                <h2 class="stat-number fw-bold mb-2 d-inline">+</h2>
+                <p class="fs-5 fw-medium mb-0">Years Experience</p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="stat-number fw-bold mb-2 counter" data-target="30">0</h2>
+                <h2 class="stat-number fw-bold mb-2 d-inline">+</h2>
+                <p class="fs-5 fw-medium mb-0">Countries Served</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-black">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="font-serif display-4 fw-bold text-white mb-3">Featured <span class="text-warning">Masterpieces</span></h2>
+            <p class="text-secondary mb-0 fs-5">Handpicked from our exclusive collection</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="art-card">
+                    <img src="images/img9.jpeg" class="art-img" alt="Landscape Art">
+                    <div class="art-overlay">
+                        <span class="category-badge mb-3">ABSTRACT</span>
+                        <h3 class="font-serif fw-bold text-white mb-2">Cyber Street</h3>
+                        <p class="small text-secondary mb-3">Peter P | 2020 | Charcoal</p>
+                        <div class="d-flex align-items-end justify-content-between mb-3">
+                            <h4 class="text-warning fw-bold mb-0">$210</h4>
+                            <span class="text-white opacity-50 small">30" x 40"</span>
+                        </div>
+                        <a href="paintings.html" class="btn btn-warning w-100 fw-bold btn-sm rounded-pill">
+                            View More Paintings
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="art-card">
+                    <img src="images/img16.jpeg" class="art-img" alt="Landscape Art">
+                    <div class="art-overlay">
+                        <span class="category-badge mb-3">LANDSCAPE</span>
+                        <h3 class="font-serif fw-bold text-white mb-2">Sunset Gold</h3>
+                        <p class="small text-secondary mb-3">Dom T | 2020 | Water-color</p>
+                        <div class="d-flex align-items-end justify-content-between mb-3">
+                            <h4 class="text-warning fw-bold mb-0">$800</h4>
+                            <span class="text-white opacity-50 small">24" x 36"</span>
+                        </div>
+                        <a href="paintings.html" class="btn btn-warning w-100 fw-bold btn-sm rounded-pill">
+                            View More Paintings
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="art-card">
+                    <img src="images/img1.jpeg" class="art-img" alt="Religious Art">
+                    <div class="art-overlay">
+                        <span class="category-badge mb-3">RELIGIOUS</span>
+                        <h3 class="font-serif fw-bold text-white mb-2">Divine Bismillah</h3>
+                        <p class="small text-secondary mb-3">Alex Carter | 2022 | Acrylic</p>
+                        <div class="d-flex align-items-end justify-content-between mb-3">
+                            <h4 class="text-warning fw-bold mb-0">$650</h4>
+                            <span class="text-white opacity-50 small">18" x 24"</span>
+                        </div>
+                        <a href="paintings.html" class="btn btn-warning w-100 fw-bold btn-sm rounded-pill">
+                            View More Paintings
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5 pt-4">
+            <a href="paintings.html" class="btn-outline-premium fs-5 text-decoration-none">
+                See Our Collection
+            </a>
+        </div>
+    </div>
+    <hr>
+</section>
+<section class="py-5 bg-black text-white">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-5">
+            Explore <span class="text-warning">More</span>
+        </h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <div class="p-5 rounded-4 bg-dark h-100 shadow">
+                    <i class="fas fa-calendar-alt text-warning fa-2x mb-3"></i>
+                    <h3 class="fw-bold mb-3">Upcoming Events</h3>
+                    <p class="text-secondary mb-4">
+                        Discover our latest exhibitions, auctions, and art showcases happening soon.
+                    </p>
+                    <a href="events.html" class="btn btn-warning fw-bold px-4">
+                        View Events
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="p-5 rounded-4 bg-dark h-100 shadow">
+                    <i class="fas fa-pen-nib text-warning fa-2x mb-3"></i>
+                    <h3 class="fw-bold mb-3">Art Blog</h3>
+                    <p class="text-secondary mb-4">
+                        Read stories, artist insights, and latest trends in the art world.
+                    </p>
+                    <a href="blog.html" class="btn btn-warning fw-bold px-4">
+                        Read Blog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</section>
+<section class="py-5 bg-black text-white">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">
+                What Our <span class="text-warning">Collectors Say</span>
+            </h2>
+            <p class="text-secondary fs-5">
+                Real feedback from art lovers worldwide
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="p-4 rounded-4 bg-dark h-100 shadow">
+
+                    <p class="text-secondary">
+                        “Galleria delivered artwork that exceeded my expectations.
+                        The quality and detailing are amazing.”
+                    </p>
+
+                    <div class="d-flex align-items-center mt-4">
+                        <img src="images/profile1.jpg"
+                             class="rounded-circle me-3" width="50" height="50">
+
+                        <div>
+                            <h6 class="mb-0 text-warning">Ahmed Raza</h6>
+                            <small class="text-secondary">Dubai Collector</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="col-md-4">
+                <div class="p-4 rounded-4 bg-dark h-100 shadow">
+
+                    <p class="text-secondary">
+                        “The abstract collection looks very premium.
+                         My living room now feels like a gallery.”
+                    </p>
+                    <div class="d-flex align-items-center mt-4">
+                        <img src="images/profile2.jpg"
+                             class="rounded-circle me-3" width="50" height="50">
+                        <div>
+                            <h6 class="mb-0 text-warning">Sarah Khan</h6>
+                            <small class="text-secondary">UK Buyer</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 rounded-4 bg-dark h-100 shadow">
+
+                    <p class="text-secondary">
+                        “The delivery was fast, and the painting was exactly as shown.
+                        Highly recommended gallery!”
+                    </p>
+
+                    <div class="d-flex align-items-center mt-4">
+                        <img src="images/profile3.jpg"
+                             class="rounded-circle me-3" width="50" height="50">
+
+                        <div>
+                            <h6 class="mb-0 text-warning">Ali Hassan</h6>
+                            <small class="text-secondary">Pakistan Buyer</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="py-5 text-white">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <h4 class="text-warning mb-3 font-serif fw-bold">
+                    <i class="fas fa-palette me-2"></i>Galleria Art Gallery
+                </h4>
+                <p class="mb-4 text-secondary leading-relaxed">Certified company engaged in selling wide variety of masterpieces worldwide since 1995.</p>
+                <div class="d-flex gap-2 align-items-start text-secondary">
+                    <i class="fas fa-map-marker-alt text-warning mt-1"></i>
+                    <p class="small">Aptech Computer Education North Karachi Center Sector 11-A, North Karachi, Pakistan</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-3 text-uppercase">Quick Links</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2 footer-links">
+                    <li><a href="index.html" class="text-white text-decoration-none"> Home</a></li>
+                    <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                    <li><a href="faqs.html" class="text-white text-decoration-none"> FAQs</a></li>
+                    <li><a href="sitemap.html" class="text-white text-decoration-none">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="text-white fw-bold mb-3 text-uppercase">Legal</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                <li><a href="shipping-policy.html" class="text-white text-decoration-none">Shipping Policy</a></li>
+            </ul>
+            </div>
+            <div class="col-lg-4">
+                <h6 class="text-white fw-bold mb-3 text-uppercase">Stay Connected</h6>
+                <p class="text-secondary">+92 3370757609 | hello@galleria.art</p>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="https://www.instagram.com/galleria_darte__/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/akgalleria/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/GalleriaAk" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-5 opacity-10">
+        <div class="text-center">
+            <p class="mb-0 text-secondary">&copy; 2024 Galleria Fine Arts. All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    $('.counter').each(function () {
+        let $this = $(this),
+            target = +$this.attr('data-target'),
+            count = 0,
+            inc = target / 800;
+
+        function update() {
+            count += inc;
+            if(count < target){
+                $this.text(Math.ceil(count));
+                requestAnimationFrame(update);
+            } else {
+                $this.text(target);
+            }
+        }
+        update();
+    });
+
+    $('.category-card').mousemove(function (e) {
+        let card = $(this);
+        let offset = card.offset();
+
+        let x = e.pageX - offset.left;
+        let y = e.pageY - offset.top;
+
+        let w = card.width();
+        let h = card.height();
+
+        let rotateX = -(y - h/2) / 4;
+        let rotateY = (x - w/2) / 4;
+
+        card.css('transform', `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`);
+    });
+    $('.category-card').mouseleave(function () {
+        $(this).css('transform', 'rotateX(0) rotateY(0) scale(1)');
+    });
+});
+</script>
+</body>
+</html>

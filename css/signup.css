@@ -1,0 +1,100 @@
+
+        .split-container {
+    display: flex;
+    min-height: calc(100vh - 80px);
+}
+        .split-left {
+            flex: 1;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('../images/sign.jpeg') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            display: none;
+        }
+        @media (min-width: 992px) {
+            .split-left { display: flex; }
+        }
+        input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #0f0f0f inset !important;
+    -webkit-text-fill-color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+        .split-right {
+            flex: 1;
+            background: var(--dark-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .signup-box {
+            margin-top: 20%;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .font-serif { font-family: 'Lora', serif; }
+
+        .form-control {
+            background: #111 !important;
+            border: 1px solid #333;
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-yellow);
+            box-shadow: 0 0 10px rgba(250, 204, 21, 0.15);
+        }
+
+        .btn-signup {
+            background: var(--primary-yellow);
+            color: black;
+            font-weight: 700;
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-signup:hover {
+            background: #eab308;
+            transform: scale(1.02);
+        }
+
+        .social-btn {
+            background: transparent;
+            border: 1px solid #333;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .social-btn:hover {
+            background: white;
+            color: black;
+        }
+
+        .text-yellow { color: var(--primary-yellow); }
+        ::placeholder {
+    color: #938d8d !important;
+    opacity: 1 !important;
+}

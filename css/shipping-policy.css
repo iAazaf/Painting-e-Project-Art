@@ -1,0 +1,97 @@
+body {
+    background: radial-gradient(circle at top, #111, #000);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(245,197,24,0.15), transparent);
+    top: -100px;
+    left: -100px;
+    filter: blur(100px);
+    animation: moveGlow 10s infinite alternate;
+    z-index: 0;
+}
+
+@keyframes moveGlow {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(200px, 150px); }
+}
+
+h1 {
+    color: #f5c518;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #f5c518, #fff, #f5c518);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+.policy-card {
+    position: relative;
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.policy-card:hover {
+    box-shadow: 0 10px 30px rgba(250, 204, 21, 0.2);
+}
+
+.policy-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.policy-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #f5c518, transparent, #f5c518);
+    opacity: 0;
+    transition: 0.5s;
+}
+.policy-card:hover::before {
+    opacity: 1;
+}
+
+.policy-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.policy-card:hover {
+    transform: translateY(-15px) scale(1.03) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(245,197,24,0.3);
+}
+
+.policy-card h3 {
+    color: #f5c518;
+}
+
+.policy-card p {
+    color: #ddd;
+}

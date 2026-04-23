@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Galleria | Bootstrap Cart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3 mb-5">
+    <div class="container">
+
+                <a href="images/logo.png" class="navbar-brand fw-bold fs-2 text-warning font-serif">
+            <img src="images/logo.png" class="rounded me-2" alt="Logo" height="50">Galleria
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto gap-2">
+
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="paintings.html">Paintings</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+
+                <li class="nav-item btn-login">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium" href="login.html">
+                        <i class="fas fa-user me-2"></i>Login
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link btn text-white px-3 ms-2 fw-medium" href="sitemap.html">
+                        <i class="fas fa-sitemap me-2"></i>Sitemap
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<div class=" container mt-5">
+
+    <div id="cart-items"></div>
+
+    <div class="total-box mt-4">
+        <h4>Total: $<span id="total">0</span></h4>
+
+        <a href="paintings.html" class="btn btn-warning w-100 mt-3">
+            Continue Shopping
+        </a>
+
+        <button class="btn btn-warning w-100 mt-3 checkout-btn">
+            Proceed to Checkout
+        </button>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// RENDER
+function renderCart(){
+
+    let total = 0;
+
+    $("#cart-items").html("");
+
+    if(cart.length === 0){
+        $("#cart-items").html(`
+            <div class="empty">
+                <h3>Your Cart is Empty</h3>
+            </div>
+        `);
+        $("#total").text("0");
+        checkCartStatus();
+        return;
+    }
+
+    cart.forEach((item,index)=>{
+
+        let price = parseFloat(item.price.replace("$",""));
+        total += price;
+
+        $("#cart-items").append(`
+        <div class="cart-box row align-items-center g-3 mb-3">
+
+            <div class="col-3">
+                <img src="${item.img}" class="cart-img">
+            </div>
+
+            <div class="col-6">
+                <h5>${item.name}</h5>
+                <p class="text-warning">$${price}</p>
+            </div>
+
+            <div class="col-3 text-end">
+                <button class="remove-btn" data-index="${index}">
+                    Remove
+                </button>
+            </div>
+
+        </div>
+        `);
+    });
+
+    $("#total").text(total.toFixed(2));
+
+    checkCartStatus();
+}
+// CHECK STATUS
+function checkCartStatus(){
+
+    let btn = $(".checkout-btn");
+
+    if(cart.length === 0){
+        btn.prop("disabled", true);
+        btn.text("Cart is Empty");
+    } else {
+        btn.prop("disabled", false);
+        btn.text("Proceed to Checkout");
+    }
+}
+// CHECKOUT CLICK
+$(document).on("click",".checkout-btn",function(){
+
+    if(cart.length === 0){
+        alert("Your cart is empty");
+        return;
+    }
+    window.location.href = "checkout.html";
+});
+$(document).on("click",".remove-btn",function(){
+
+    let index = $(this).data("index");
+
+    cart.splice(index,1);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    renderCart();
+});
+
+// INIT
+renderCart();
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+  .sitemap-section {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #000, #050505);
+        }
+        .sitemap-card {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            transition: 0.3s;
+        }
+        .sitemap-card:hover {
+            border-color: var(--primary-yellow);
+            transform: translateY(-5px);
+        }
+        .sitemap-link {
+            color: #a1a1aa;
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+        .sitemap-link:hover {
+            color: var(--primary-yellow);
+            padding-left: 10px;
+        }
+        .category-icon {
+            font-size: 1.5rem;
+            color: var(--primary-yellow);
+            margin-bottom: 20px;
+        }
+        .legal{
+            margin-left: 20%;
+        }
